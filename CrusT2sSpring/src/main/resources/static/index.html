@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+
+<body>
+    <div>
+        <p id="errorMessage"></p>
+    </div>
+<div class="right_side">
+    <button id="but_Imprimir" onclick="validaNome()">🖨️ Imprimir Relatório</button>
+</div>
+<h3>CRUD Conteiner</h3>
+<div class="centered">
+
+    <table id="myTableBody">
+        <tr>
+            <th><input type="text" id="tbContainer" class="finput" placeholder="Cliente"></th>
+            <th><input type="text" id="contnum"  maxlength="11" class="finput"
+                       placeholder="N° Conteiner" title="4 Letras e 7 Números" required></th>
+            <th>
+                <select name="selcont" id="selcont">Tipo de Conteiner
+                    <option value="" selected hidden>Tipo</option>
+                    <option value="20">20</option>
+                    <option value="40">40</option>
+                </select>
+            </th>
+            <th>
+                <select name="selstat" id="selstat">
+                    <option value="" selected hidden>Status</option>
+                    <option value="Cheio">Cheio</option>
+                    <option value="Vazio">Vazio</option>
+                </select>
+            </th>
+            <th>
+                <select name="selcat" id="selcat">
+                    <option value="" selected hidden>Categoria</option>
+                    <option value="Importação">Importação</option>
+                    <option value="Exportação">Exportação</option>
+                </select>
+            </th>
+            <th><button id="but_registrarContainer" onclick="validaContainer()" title="Salvar">✅</button></th>
+            <th><button id="but_pesquisarContainer" onclick="pesquisarCont()" title="Pesquisar">🔍</button></th>
+
+        </tr>
+    </table>
+    <div id="loadingContainer">
+        <p>Buscando...</p>
+    </div>
+    <div id="notFoundContainer">
+        <p>Nenhum resultado encontrado.</p>
+    </div>
+</div>
+
+<br>
+<br>
+<h3>CRUD Movimentação</h3>
+
+<div class="centered">
+    <table>
+        <tr>
+            <th><input type="text" id="container_mov" placeholder="N° Container"></th>
+            <th>
+                <select name="selmov" id="selmov">
+                    <option value="" selected hidden>Tipo de Movimentação</option>
+                    <option value="Embarque">Embarque</option>
+                    <option value="Descarga">Descarga</option>
+                    <option value="GateIn">Gate In</option>
+                    <option value="GateOut">Gate Out</option>
+                    <option value="Reposicionamento">Reposicionamento</option>
+                    <option value="Pesagem">Pesagem</option>
+                    <option value="Scanner">Scanner</option>
+                </select>
+            </th>
+            <th><input type="time" name="hInicio" id="hInicio"></th>
+            <th><input type="time" name="hFim" id="hFim"></th>
+            <th><button id="but_registrarMovimento" onclick="registrarMov()" title="Salvar">✅</button></th>
+            <th><button id="but_pesquisarMov" onclick="pesquisarMov()" title="Pesquisar">🔍</button></th>
+        </tr>
+    </table>
+    <div id="loadingMovement">
+        <p>Buscando...</p>
+    </div>
+    <div id="notFoundMovement">
+        <p>Nenhum resultado encontrado.</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>

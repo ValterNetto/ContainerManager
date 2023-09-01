@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(231, 231, 231);
+}
+
+#loadingContainer,
+#notFoundContainer,
+#loadingMovement,
+#notFoundMovement{
+    display: none;
+}
+.right_side{
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-end;
+}
+button{
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+}
+input, select{
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+}
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px 10px;
+}
+
+th {
+    background-color: blue;
+    color: white;
+}
+
+td,
+table {
+    background-color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+#but_Imprimir {
+    margin-top: 20px;
+}
+
+input::placeholder {
+    font-weight: bolder;
+}
+
+.centered,
+h3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+}
+
+.fdiv {
+    display: flex;
+    width: 25%;
+}
+
+.finput {
+    border-radius: 1%;
+}
+
+#lapis:hover, #lixo:hover{
+    cursor: pointer;
+    background-color: rgb(184, 184, 184);
+}
